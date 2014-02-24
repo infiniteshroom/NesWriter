@@ -11,5 +11,5 @@ Notes
 ======
 
 * The script doesn't currently support NES pointers, this means that the text you intend to replace can only be replaced with text of the same length or smaller.
-* The script has only been tested with Legend of Zelda NES and Super Mario Bros. NES. Although the table.php script can be updated with a known font table for another ROM. In the future would be nice to detect the ROM from the NES header and load the correct font table.
+* The script has only been tested with Legend of Zelda NES and Super Mario Bros. NES. You can add custom mappings for iNES header titles or filenames in the "config/mappings.php" file and fonts tables for these mappings can be created based on "./tables/generic.php".
 * This is very experimental and was more of a learning process for me than anything else - so no promises that this script is anywhere near perfect ;)

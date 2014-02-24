@@ -1,7 +1,7 @@
 <?php
 
-	/* the text table to use - This is the default table used within most Nintendo games */
-	/* format : [char] => [hex] */
+	/* the text table to use - This is the default table used within most Nintendo games
+		format : [char] => [hex] */
  
 	return array(
 		'0' => '00',
@@ -50,6 +50,4 @@
 		'?' => '2e',
 		'2f' => '-',
 	);
-
-			/* later add zelda's carriage return - chars */
 ?>

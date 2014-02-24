@@ -7,6 +7,8 @@ const SETTING_ARG_OFFSET = 2;
 const TEXT_ARG_OFFSET = 3;
 const REPLACE_ARG_OFFSET = 4;
 const REPLACE_SETTING_STRING = '--replace';
+/*const GENERATE_SETTING_STRING = '--generate';*/
+
 
 $writer = null;
 
@@ -54,4 +56,5 @@ function syntaxMessage() {
 function successMessage($file) {
 	echo "File: $file text has been replaced :) \n";
 }
+
 ?>
