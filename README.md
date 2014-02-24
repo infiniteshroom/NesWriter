@@ -11,5 +11,5 @@ Notes
 ======
 
 * The script doesn't currently support NES pointers, this means that the text you intend to replace can only be replaced with text of the same length or smaller.
-* The script has only been tested with Legend of Zelda NES and Super Mario Bros. NES. You can add custom mappings for iNES header titles or filenames in the "config/mappings.php" file and fonts tables for these mappings can be created based on "./tables/generic.php".
+* The script has only been tested with Legend of Zelda NES and Super Mario Bros. NES. You can add custom mappings for iNES header titles or filenames in the "config/mappings.php" file and font tables for these mappings can be created based on "./tables/generic.php". If a font table cannot be found, NesWriter will prompt you for a file path to one. Support for .tpl...soon ;)
 * This is very experimental and was more of a learning process for me than anything else - so no promises that this script is anywhere near perfect ;)
