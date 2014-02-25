@@ -1,11 +1,12 @@
 NesWriter
 =========
 
-A simple php script to replace text within NES Roms.
+A simple php script to replace text within NES Roms. Windows/Mac/*nix
 
 Can be run from the cli using run.php e.g php run.php or the writer.php class can be used standalone for embedding in a website - for instance.
 
-Syntax: [romfile] --replace [text] [replace]
+Replace Text: [romfile] --replace [text] [replace]
+Dump Text(Hex View): [romfile] --dump
 
 Notes
 ======
