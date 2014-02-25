@@ -117,6 +117,69 @@
 			}
 		}
 
+		public function dumpText() {
+			/* dump all text from game, garbage may be generated at some point in the rom */
+			$rom_unpacked = unpack("H*", $this->rom);
+
+			/* spilt into each byte */
+			$hex_pairs = str_split($rom_unpacked[1], 2);
+
+			/* we need to flip the table array - key=value - value=key */
+			$font_table = $this->table;
+		
+			$font_table = array_flip($font_table);
+
+			/* result string */
+			$text_results = array();
+
+			$hex_results = array();
+
+
+			$output = "";
+			$count = 0;
+
+			foreach($hex_pairs as $pair) {
+
+				if($count == 17 && $count != 0) {
+					$text_results[] = "\n";
+					$hex_results[] = "\n";
+					$count = 0;
+				}
+
+
+				if(isset($font_table[$pair])) {
+
+					$text_results[] = $font_table[$pair];
+					$hex_results[] = strtoupper($pair) . ' ';
+				}
+
+				else {
+					$text_results[] = '#';
+					$hex_results[] = strtoupper($pair) . ' ';
+				}
+
+				$count++;
+
+
+			}
+
+			/* implode on \n for 17th byte */
+
+			$joined_hex = implode("", $hex_results);
+			$joined_text = implode("", $text_results);
+
+			$spilt_hex = explode("\n", $joined_hex);
+			$spilt_text = explode("\n", $joined_text);
+
+
+			foreach($spilt_hex as $key => $value) {
+				$output .= "{$spilt_hex[$key]} || {$spilt_text[$key]}\n";
+			}
+
+			echo $output;
+
+		}
+
 		public function replaceText($find, $replace) {
 
 			if(strlen($replace) > strlen($find)) {
